@@ -1,7 +1,9 @@
-import React from 'react';
+import PropTypes from "prop-types";
 
-export const HelloWorld = (message) => <div>Hello ${message}</div>;
+const HelloWorld = (message) => <div>Hello ${message}</div>;
 
 HelloWorld.propTypes = {
-  message: PropTypes.string
+  message: PropTypes.string,
 };
+
+export default HelloWorld;
