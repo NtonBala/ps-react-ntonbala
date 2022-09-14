@@ -1,9 +1,15 @@
 import PropTypes from "prop-types";
 
-const HelloWorld = (message) => <div>Hello ${message}</div>;
+/** Lame component that greets by name. */
+const HelloWorld = (name) => <div>Hello, ${name}!</div>;
+
+HelloWorld.defaultProps = {
+  name: 'World'
+}
 
 HelloWorld.propTypes = {
-  message: PropTypes.string,
+  /** Name to display */
+  name: PropTypes.string,
 };
 
 export default HelloWorld;
