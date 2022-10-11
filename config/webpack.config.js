@@ -313,6 +313,8 @@ module.exports = function (webpackEnv) {
         // Support React Native Web
         // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
         'react-native': 'react-native-web',
+        // * Alias for Reusable React Components Pluralsight course project
+        'ps-reusable-react-components-ntonbala': path.resolve(__dirname, '../src/components'),
         // Allows for better profiling with ReactDevTools
         ...(isEnvProductionProfile && {
           'react-dom$': 'react-dom/profiling',
