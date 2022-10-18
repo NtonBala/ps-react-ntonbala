@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from 'prop-types';
+import CodeExample from "./CodeExample";
 
 export class Example extends React.Component {
   constructor(props) {
@@ -26,7 +27,7 @@ toggleCode = e => {
       <p>
         <button type="button" onClick={this.toggleCode}>{showCode ? 'Hide' : 'Show'}</button>
       </p>
-      {showCode && code}
+      {showCode && <CodeExample>{code}</CodeExample>}
     </div>
   }
 }

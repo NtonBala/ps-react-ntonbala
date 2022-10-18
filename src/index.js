@@ -1,8 +1,9 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 import {Docs} from './docs/Docs';
-import "./index.css";
-import reportWebVitals from "./reportWebVitals";
+import './index.css';
+import '../node_modules/highlight.js/styles/ocean.css';
+import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
