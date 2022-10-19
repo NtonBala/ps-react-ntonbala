@@ -1,4 +1,4 @@
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 export const Props = ({ props }) => (
   <table className="props">
@@ -13,17 +13,22 @@ export const Props = ({ props }) => (
     </thead>
     <tbody>
       {Object.keys(props).map(key => {
-        const {description, type: {name}, defaultValue, required} = props[key];
+        const {
+          description,
+          type: { name },
+          defaultValue,
+          required,
+        } = props[key];
 
         return (
-        <tr key={key}>
-          <td>{key}</td>
-          <td>{description}</td>
-          <td>{name}</td>
-          <td>{defaultValue?.value}</td>
-          <td>{required && 'X'}</td>
-        </tr> 
-      )
+          <tr key={key}>
+            <td>{key}</td>
+            <td>{description}</td>
+            <td>{name}</td>
+            <td>{defaultValue?.value}</td>
+            <td>{required && 'X'}</td>
+          </tr>
+        );
       })}
     </tbody>
   </table>

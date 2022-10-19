@@ -11,20 +11,22 @@ class CodeExample extends React.Component {
     hljs.registerLanguage('javascript', javascript);
     hljs.highlightBlock(this.element);
   }
-  
+
   render() {
     return (
-      <pre ref={ref => {this.element = ref}}>
-        <code>
-          {this.props.children}
-        </code>
+      <pre
+        ref={ref => {
+          this.element = ref;
+        }}
+      >
+        <code>{this.props.children}</code>
       </pre>
     );
   }
 }
 
 CodeExample.propTypes = {
-  children: PropTypes.string.isRequired
-}
+  children: PropTypes.string.isRequired,
+};
 
 export default CodeExample;

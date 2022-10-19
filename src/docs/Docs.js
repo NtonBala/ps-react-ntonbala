@@ -1,7 +1,7 @@
-import React from "react";
-import { Navigation } from "./Navigation";
-import { ComponentPage } from "./ComponentPage";
-import componentData from "../../config/componentData";
+import React from 'react';
+import { Navigation } from './Navigation';
+import { ComponentPage } from './ComponentPage';
+import componentData from '../../config/componentData';
 
 const getHash = () => window.location.hash.substring(1);
 
@@ -14,7 +14,7 @@ export class Docs extends React.Component {
   }
 
   componentDidMount() {
-    window.addEventListener("hashchange", () => {
+    window.addEventListener('hashchange', () => {
       // * By convention the route and the URL should match the components name
       this.setState({ route: getHash() });
     });
@@ -22,15 +22,11 @@ export class Docs extends React.Component {
 
   render() {
     const { route } = this.state;
-    const component = route
-      ? componentData.filter((component) => component.name === route)[0]
-      : componentData[0];
+    const component = route ? componentData.filter(component => component.name === route)[0] : componentData[0];
 
     return (
       <div>
-        <Navigation
-          components={componentData.map((component) => component.name)}
-        ></Navigation>
+        <Navigation components={componentData.map(component => component.name)}></Navigation>
         <ComponentPage component={component} />
       </div>
     );
