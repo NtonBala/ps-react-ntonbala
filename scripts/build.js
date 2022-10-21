@@ -7,7 +7,7 @@ process.env.NODE_ENV = 'production';
 // Makes the script crash on unhandled rejections instead of silently
 // ignoring them. In the future, promise rejections that are not handled will
 // terminate the Node.js process with a non-zero exit code.
-process.on('unhandledRejection', err => {
+process.on('unhandledRejection', (err) => {
   throw err;
 });
 
@@ -57,7 +57,7 @@ checkBrowsers(paths.appPath, isInteractive)
     // This lets us display how much they changed later.
     return measureFileSizesBeforeBuild(paths.appBuild);
   })
-  .then(previousFileSizes => {
+  .then((previousFileSizes) => {
     // Remove all content but keep the directory so that
     // if you're in it, you don't end up in Trash
     fs.emptyDirSync(paths.appBuild);
@@ -95,7 +95,7 @@ checkBrowsers(paths.appPath, isInteractive)
       const buildFolder = path.relative(process.cwd(), paths.appBuild);
       printHostingInstructions(appPackage, publicUrl, publicPath, buildFolder, useYarn);
     },
-    err => {
+    (err) => {
       const tscCompileOnError = process.env.TSC_COMPILE_ON_ERROR === 'true';
       if (tscCompileOnError) {
         console.log(
@@ -111,7 +111,7 @@ checkBrowsers(paths.appPath, isInteractive)
       }
     },
   )
-  .catch(err => {
+  .catch((err) => {
     if (err && err.message) {
       console.log(err.message);
     }
@@ -159,7 +159,7 @@ function build(previousFileSizes) {
         messages.warnings.length
       ) {
         // Ignore sourcemap warnings in CI builds. See #8227 for more info.
-        const filteredWarnings = messages.warnings.filter(w => !/Failed to parse source map/.test(w));
+        const filteredWarnings = messages.warnings.filter((w) => !/Failed to parse source map/.test(w));
         if (filteredWarnings.length) {
           console.log(
             chalk.yellow(
@@ -181,7 +181,7 @@ function build(previousFileSizes) {
         return bfj
           .write(paths.appBuild + '/bundle-stats.json', stats.toJson())
           .then(() => resolve(resolveArgs))
-          .catch(error => reject(new Error(error)));
+          .catch((error) => reject(new Error(error)));
       }
 
       return resolve(resolveArgs);
@@ -192,6 +192,6 @@ function build(previousFileSizes) {
 function copyPublicFolder() {
   fs.copySync(paths.appPublic, paths.appBuild, {
     dereference: true,
-    filter: file => file !== paths.appHtml,
+    filter: (file) => file !== paths.appHtml,
   });
 }

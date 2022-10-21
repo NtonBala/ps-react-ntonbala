@@ -10,7 +10,7 @@ export class Example extends React.Component {
     };
   }
 
-  toggleCode = e => {
+  toggleCode = (e) => {
     e.preventDefault();
     this.setState(({ showCode }) => ({ showCode: !showCode }));
   };

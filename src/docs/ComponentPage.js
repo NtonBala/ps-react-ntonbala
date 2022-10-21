@@ -11,7 +11,7 @@ export const ComponentPage = ({ component }) => {
       <p>{description}</p>
       <h3>Example{examples.length > 1 && 's'}</h3>
       {examples.length > 0
-        ? examples.map(example => <Example key={example.code} example={example} componentName={name} />)
+        ? examples.map((example) => <Example key={example.code} example={example} componentName={name} />)
         : 'No examples exist.'}
       <h3>Props</h3>
       {props ? <Props props={props} /> : 'This component accepts no props.'}

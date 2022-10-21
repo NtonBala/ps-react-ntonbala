@@ -12,7 +12,7 @@ export const Props = ({ props }) => (
       </tr>
     </thead>
     <tbody>
-      {Object.keys(props).map(key => {
+      {Object.keys(props).map((key) => {
         const {
           description,
           type: { name },
