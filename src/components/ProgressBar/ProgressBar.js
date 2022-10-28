@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+/** Horizontal progress bar with 3 cutoff points percent scale and width/height controls. */
 class ProgressBar extends React.Component {
   getColor = (percent) => {
     if (percent === 100) return 'green';
