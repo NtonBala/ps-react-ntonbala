@@ -1,6 +1,7 @@
-# Creating Reusable React Components
+# PS Reusable React Components
 
 This project relates to [Creating Reusable React Components](https://app.pluralsight.com/library/courses/react-creating-reusable-components/table-of-contents) Pluralsight course by [Cory House](https://app.pluralsight.com/profile/author/cory-house). Original repo can be found [here](https://github.com/coryhouse/ps-react).
+
 It was initially bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and than ejected to get full control of creating custom React component's library documentation.
 
 ## Available Scripts
