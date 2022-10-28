@@ -5,7 +5,8 @@ import PropTypes from 'prop-types';
 const Label = ({ htmlFor, label, required }) => {
   return (
     <label style={{ display: 'block' }} htmlFor={htmlFor}>
-      {label} {required && <span style={{ color: 'red' }}> *</span>}
+      {label}
+      {required && <span style={{ color: 'red' }}> *</span>}
     </label>
   );
 };
