@@ -59,6 +59,10 @@ td {
   padding: 0;
 }
 
+.navigation li:not(:last-of-type) {
+  margin-bottom: 8px;
+}
+
 .component-page {
   margin-left: 275px;
 }
