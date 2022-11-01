@@ -30,7 +30,7 @@ export class Example extends React.Component {
         <ExampleComponent />
         <p>
           <button type="button" onClick={this.toggleCode}>
-            {showCode ? 'Hide' : 'Show'}
+            {showCode ? 'Hide Code' : 'Show Code'}
           </button>
         </p>
         {showCode && <CodeExample>{code}</CodeExample>}
