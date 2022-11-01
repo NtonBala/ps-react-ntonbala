@@ -66,3 +66,7 @@ td {
 .component-page {
   margin-left: 275px;
 }
+
+.reset-Button {
+  all: unset;
+}
