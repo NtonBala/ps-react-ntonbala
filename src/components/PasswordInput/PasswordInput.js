@@ -18,7 +18,7 @@ class PasswordInput extends React.Component {
   };
 
   render() {
-    const { htmlId, value, label, error, onChange, placeholder, minLength, showVisibilityToggle, quality, ...rest } =
+    const { htmlId, value, label, error, onChange, placeholder, maxLength, showVisibilityToggle, quality, ...rest } =
       this.props;
     const { showPassword } = this.state;
 
@@ -30,7 +30,7 @@ class PasswordInput extends React.Component {
         type={showPassword ? 'text' : 'password'}
         onChange={onChange}
         value={value}
-        minLength={minLength}
+        maxLength={maxLength}
         error={error}
         required
         {...rest}
@@ -52,7 +52,7 @@ class PasswordInput extends React.Component {
 }
 
 PasswordInput.defaultProps = {
-  minLength: 50,
+  maxLength: 50,
   showVisibilityToggle: false,
   label: 'Password',
 };
@@ -80,7 +80,7 @@ PasswordInput.propTypes = {
   error: PropTypes.string,
 
   /** Max password length accepted */
-  minLength: PropTypes.number,
+  maxLength: PropTypes.number,
 
   /** Set to true to show the toggle for displaying the currently entered password */
   showVisibilityToggle: PropTypes.bool,
