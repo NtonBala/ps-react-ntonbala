@@ -106,7 +106,7 @@ RegistrationForm.propTypes = {
   /** Message displayed upon successful submission */
   confirmationMessage: PropTypes.string,
 
-  /** Called when for is submitted */
+  /** Called when form is submitted */
   onSubmit: PropTypes.func.isRequired,
 
   /** Minimum password length */
