@@ -1,0 +1,19 @@
+/*
+  In real app, would typically use Sass, Less or PorstCSS with cssnext to centralize variables
+  like the error color of red in a separate single file.
+*/
+
+/* .textinput is a block - style it */
+.textinput {
+  margin-bottom: 16px;
+}
+
+/* Error is an element inside .textinput block - style it */
+.textinput__error {
+  color: red;
+}
+
+/* .textinput block has input element inside it - style it with error state modifier */
+.textinput__input--state-error {
+  border: solid 1px red;
+}
