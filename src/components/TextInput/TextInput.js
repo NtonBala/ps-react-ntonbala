@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Label from '../Label';
+import * as styles from './styles';
 
 /** Text input with integrated label to enforce consistency in layout, error display, label placement and required field marker. */
 const TextInput = ({
@@ -17,7 +18,7 @@ const TextInput = ({
   ...rest
 }) => {
   return (
-    <div style={{ marginBottom: 16 }}>
+    <div style={styles.wrapper}>
       <Label htmlFor="htmlId" label={label} required={required} />
       <input
         id={htmlId}
@@ -26,12 +27,12 @@ const TextInput = ({
         placeholder={placeholder}
         value={value}
         onChange={onChange}
-        style={error && { border: 'solid 1px red' }}
+        style={{ ...(error && styles.inputErrorState) }}
         {...rest}
       />
       {children}
       {error && (
-        <div className="error" style={{ color: 'red' }}>
+        <div className="error" style={styles.error}>
           {error}
         </div>
       )}
