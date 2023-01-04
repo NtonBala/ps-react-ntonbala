@@ -31,11 +31,7 @@ const TextInput = ({
         {...rest}
       />
       {children}
-      {error && (
-        <div className="error" style={styles.error}>
-          {error}
-        </div>
-      )}
+      {error && <div style={styles.error}>{error}</div>}
     </div>
   );
 };
