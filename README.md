@@ -4,7 +4,7 @@ This project relates to [Creating Reusable React Components](https://app.plurals
 
 It was initially bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and than ejected to get full control of creating custom React component's library documentation.
 
-Project package manager is `npm`, to run project use `npm run start` command.
+Project package manager is `npm`, to run project install dependencies via `npm install` and run `npm run start` command.
 
 ## Available Scripts
 
